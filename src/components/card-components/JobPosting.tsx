@@ -30,7 +30,7 @@ export default function JobPosting({ job, candidate }: JobPostingProps) {
       });
       setStatus("Application Submitted!");
     } catch (err) {
-      setError(err);
+      setError(err as Error);
     } finally {
       setLoading(false);
     }

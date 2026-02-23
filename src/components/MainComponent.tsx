@@ -8,7 +8,7 @@ import type { Candidate } from "../types";
 
 export default function MainComponent() {
   const [candidate, setCandidate] = useState<Candidate | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);
 
   return (

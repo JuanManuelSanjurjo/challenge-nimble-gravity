@@ -5,7 +5,7 @@ import { getCandidate } from "../api/get-candidate";
 export type MyDataFormProps = {
   setCandidate: React.Dispatch<React.SetStateAction<Candidate | null>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  setError: React.Dispatch<React.SetStateAction<string | null>>;
+  setError: React.Dispatch<React.SetStateAction<Error | null>>;
 };
 
 export default function MyDataForm({
