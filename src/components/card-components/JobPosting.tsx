@@ -48,8 +48,12 @@ export default function JobPosting({ job, candidate }: JobPostingProps) {
     <>
       <form className={`job-posting bordered-box `} onSubmit={handleApplyToJob}>
         {error && <p className=" job-title error">{error?.message}</p>}
-        {loading && <p className="job-title ">Applying...</p>}
-        {status && <p className="job-title success">{status}</p>}
+        {loading && <p className="job-title loading">Applying...</p>}
+        {status && (
+          <p className="job-title success" style={{ color: "#1da15d" }}>
+            {status}
+          </p>
+        )}
         {!error && !loading && !status && (
           <p className={error ? "job-title error" : "job-title"}>{job.title}</p>
         )}
