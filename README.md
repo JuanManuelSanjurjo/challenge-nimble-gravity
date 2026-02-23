@@ -2,7 +2,7 @@
 
 ## 🚀 Demo
 
-Live Page: https://juanmanuelsanjurjo.github.io/challenge-nimble-gravity/
+Live Page: https://challenge-nimble-gravity.vercel.app/
 
 ## Stack
 
