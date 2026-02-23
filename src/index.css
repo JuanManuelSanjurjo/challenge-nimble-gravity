@@ -1,0 +1,153 @@
+/* Base Styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #010315;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --loading: #24acf2;
+  --error: #fc4f01;
+  --info: #1da15d;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+input {
+  border-radius: 0.2rem;
+  border: none;
+  padding: 0.5rem;
+}
+#github-url {
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+button[type="submit"] {
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #222436;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  height: fit-content;
+}
+
+button:hover {
+  background-color: var(--loading);
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+.main-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+}
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.bordered-box {
+  padding: 1rem;
+  border: 2px solid currentColor;
+  box-shadow: 0px 0px 8px -3px currentColor;
+  border-radius: 0.5rem;
+}
+
+/* Status Styles */
+.error {
+  text-align: center;
+  color: var(--error);
+}
+.loading {
+  text-align: center;
+  color: var(--loading);
+}
+.success {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-block: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+  border-color: var(--info);
+}
+.success p {
+  margin: 0;
+}
+
+/* Basic Components*/
+.job-title {
+  font-weight: bold;
+}
+.job-posting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.job-posting:hover {
+  box-shadow: 4px 4px 0 0 currentColor;
+  transform: translateY(-2px);
+}
+
+.job-posting > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.job-posting p {
+  margin: 0;
+}
+
+.job-posting-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h2 {
+    text-align: center;
+    margin: 1rem;
+  }
+  .job-posting {
+    flex-direction: column;
+    gap: 1rem;
+    width: auto;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+  }
+}
